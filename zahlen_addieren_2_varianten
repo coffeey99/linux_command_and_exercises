@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Prüfen, ob genau 2 Argumente übergeben wurden
+if [ $# -ne 2 ]; then
+    echo "Benutzung: $0 <argument1> <argument2>"
+    exit 1
+fi
+
+# Argumente in Variablen speichern
+arg1=$1
+arg2=$2
+
+echo "Erstes Argument: $arg1"
+echo "Zweites Argument: $arg2"
+
+# Hier kann deine Logik rein
+# Beispiel: beide Argumente zusammen ausgeben
+echo "Kombiniert: ${arg1}_${arg2}"
+
+--------------
+ODER mit read
+--------------
+
+#!/bin/bash
+ 
+#Fragen
+echo "Gib die erste Zahl ein:"
+read zahl1
+ 
+echo "Gib die zweite Zahl ein:"
+read zahl2
+ 
+#Addition
+summe=$((zahl1 + zahl2))
+ 
+# Ergebnis anzeigen
+echo "Die Summe von $zahl1 und $zahl2 ist: $summe"
